@@ -1,0 +1,35 @@
+query Link($linkId: String!) {
+  link(id: $linkId) {
+    id
+    description
+    imageUrl
+    url
+    category
+    title
+  }
+}
+
+input Pagination {
+  first: Float!
+  after: String
+}
+
+query Links($input: Pagination!) {
+  links(input: $input) {
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+    edges {
+      cursor
+      node {
+        id
+        title
+        description
+        imageUrl
+        url
+        category
+      }
+    }
+  }
+}
