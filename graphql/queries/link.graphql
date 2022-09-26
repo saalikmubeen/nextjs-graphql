@@ -33,3 +33,47 @@ query Links($input: Pagination!) {
     }
   }
 }
+
+
+input CreateLinkInput {
+   title: String!
+   description: String!
+   imageUrl: String!
+   url: String!
+   category: String!
+}
+
+
+mutation CreateLink($input: CreateLinkInput!) {
+  createLink(input: $input) {
+    id
+    title
+    description
+    imageUrl
+    url
+    category
+  }
+}
+
+
+mutation BookmarkLink($bookmarkLinkId: String!) {
+  bookmarkLink(id: $bookmarkLinkId) {
+    id
+    title
+    url
+    description
+    imageUrl
+    category
+  }
+}
+
+query UserBookmarks {
+  userBookmarks {
+    description
+    id
+    title
+    imageUrl
+    url
+    category
+  }
+}

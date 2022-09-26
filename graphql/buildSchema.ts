@@ -1,12 +1,12 @@
 import path from "path";
 import { buildSchema } from "type-graphql";
 import { LinkResolver } from "./resolvers/Link";
-
-console.log(process.cwd() + "graphql/schema.graphql")
+import { userResolver } from "./resolvers/User";
 
 export const schema = await buildSchema({
   resolvers: [
-    LinkResolver
+    LinkResolver,
+    userResolver
   ],
   emitSchemaFile: {
     path: process.cwd() + "/graphql/schema.graphql",

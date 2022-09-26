@@ -6,6 +6,7 @@
 type Query {
   links(input: Pagination!): Response!
   link(id: String!): Link
+  userBookmarks: [Link!]!
 }
 
 type Response {
@@ -35,4 +36,17 @@ type Link {
 input Pagination {
   first: Float!
   after: String
+}
+
+type Mutation {
+  createLink(input: CreateLinkInput!): Link!
+  bookmarkLink(id: String!): Link!
+}
+
+input CreateLinkInput {
+  title: String!
+  url: String!
+  imageUrl: String!
+  description: String!
+  category: String!
 }
