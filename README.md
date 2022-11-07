@@ -22,6 +22,7 @@ No need to setup a separate server from the client. **DO IT ALL IN NEXTJS**
 * Set up relationship between the user model and the link model
 * Code generation for your frontend client using @graphql-codegen/cli
 * Protecting pages based on the user's role
+* Image uploads to AWS S3
 
 
 _Admins can create links and authenticated users can bookmark the links they like and un-bookmark them._
