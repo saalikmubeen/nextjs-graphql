@@ -130,7 +130,7 @@ export class LinkResolver {
       },
     });
 
-     if (user.role !== 'ADMIN') {
+    if (user.role !== 'ADMIN') {
       throw new Error(`You do not have permission to perform action`);
     }
 

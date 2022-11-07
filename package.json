@@ -16,6 +16,7 @@
     "@next-auth/prisma-adapter": "^1.0.4",
     "@prisma/client": "^4.3.1",
     "apollo-server-micro": "^3.10.2",
+    "aws-sdk": "^2.1248.0",
     "class-validator": "^0.13.2",
     "graphql": "^15.8.0",
     "micro-cors": "^0.1.1",
