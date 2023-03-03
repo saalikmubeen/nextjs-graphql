@@ -1,4 +1,5 @@
 npx prisma migrate dev
+npx prisma migrate deploy
 npx prisma db push
 npx prisma db seed
 npx prisma studio
